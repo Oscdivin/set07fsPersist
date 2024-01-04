@@ -7,6 +7,8 @@ import { useNavigate } from "react-router-dom";
 
 const Step = () => {
   const [state, setState] = useCount();
+  console.log(state);
+  
   const [user, setUser]: any = useMainUserRegistration();
 
   const [userName, setUserName] = useState<string>(user.userName);
@@ -14,7 +16,7 @@ const Step = () => {
   const [password, setPassword] = useState<string>(user.password);
 
   return (
-    <div className="min-h-[300px] w-[500px] border rounded-md p-3 ">
+    <div className="min-h-[300px] w-[500px] border rounded-md p-3 bg-[]">
       <div className="w-full flex justify-center mb-[30px]">
         <div className="flex items-center">
           <div className="w-[40px] h-[40px] flex justify-center items-center rounded-full bg-purple-400 border border-purple-500 mx-2 ">
@@ -87,6 +89,8 @@ const Step = () => {
 
 const StepII = () => {
   const [state, setState] = useCount();
+  console.log(state);
+  
   const [user, setUser]: any = useMainUserRegistration();
 
   const [bio, setBio] = useState<string>(user.bio);
@@ -152,6 +156,8 @@ const StepII = () => {
 const StepIII = () => {
   const navigate = useNavigate();
   const [state, setState] = useCount();
+  console.log(state);
+  
   const [user, setUser]: any = useMainUserRegistration();
 
   const [image, setImage] = useState<string>("");
@@ -198,8 +204,7 @@ const StepIII = () => {
         </div>
         <input
           onChange={onHandleImage}
-          id="pix"
-          type="file"
+
           className="w-full my-2 h-[50px] rounded-sm bg-transparent border outline-none pl-2 hidden "
           placeholder="Enter your user Name"
         />

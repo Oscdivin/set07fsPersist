@@ -13,7 +13,7 @@ app.use(express.json());
 mainApp(app);
 
 const server = app.listen(port, () => {
-  console.log();
+  console.log("server is connected now");
   mongoose.connect(url).then(() => {
     console.log("server connected");
   });

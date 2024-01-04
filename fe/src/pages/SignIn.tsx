@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { signInUser } from "../api/API";
 import { useSignInToken } from "../global/jotai";
 import { useNavigate } from "react-router-dom";
@@ -10,6 +10,8 @@ const SignIn = () => {
   const [password, setPassword] = useState<string>("");
 
   const [state, setState] = useSignInToken();
+  console.log(state);
+  // const [valve setvalve] = divne<String>("");
 
   return (
     <div className="w-[100%] h-[100vh] flex justify-center items-center bg-purple-50 ">
